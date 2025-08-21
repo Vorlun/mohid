@@ -1,0 +1,122 @@
+.product {
+  margin-top: 135px;
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    &__up {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #3858d6;
+      line-height: 1;
+    }
+    &__title {
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: #1e1d1d;
+      line-height: 1;
+    }
+  }
+
+  &-wrapper {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 65px 0;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+  }
+  &-img {
+    width: 334px;
+    height: 337px;
+    background: #f6f6f6;
+    display: grid;
+    place-items: center;
+  }
+  &-body {
+    height: 103px;
+    width: 334px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 11px 0;
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      color: #1e1d1d;
+    }
+  }
+  &-stars {
+    width: 105px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+  }
+  &-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    &__removed {
+      color: #8b8e99;
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: line-through;
+    }
+    &__bold {
+      color: black;
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+  &-btn {
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    background: #3858d6;
+    width: 196px;
+    height: 46px;
+    border-radius: 15px;
+  }
+  &-foot{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1120px) {
+  .product {
+    &-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      scroll-behavior: smooth;
+      padding: 10px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-card {
+      flex: 0 0 100%;
+      width: 100%;
+      scroll-snap-align: center;
+    }
+
+    &-img,
+    &-body {
+      width: 100%;
+    }
+  }
+}

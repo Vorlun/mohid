@@ -1,0 +1,55 @@
+.brand {
+  margin-top: 70px;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  &-card {
+    width: 354px;
+    height: 239px;
+    border-radius: 22px;
+    background: #f6f6f6;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 46px 41px;
+    img {
+      width: 85px;
+    }
+  }
+  &-text {
+    &__name {
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: #1e1d1d;
+    }
+    &__desc {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #8b8e99;
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .brand {
+    &-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      scroll-behavior: smooth;
+      padding: 10px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &-card {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+    }
+  }
+}

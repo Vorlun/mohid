@@ -1,0 +1,19 @@
+footer{
+    display: grid;
+    width: 100%;
+    place-items: center;
+    height: 65px;
+    background: #0B0B0B;
+    margin-top: 90px;
+    p{
+        font-weight: 500;
+        font-size: 16px;
+        color: white;
+    }
+}
+
+@media (max-width:1120px) {
+    footer{
+        margin-bottom: 60px;
+    }
+}
